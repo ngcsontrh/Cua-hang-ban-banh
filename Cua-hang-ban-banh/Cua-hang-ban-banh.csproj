@@ -92,6 +92,7 @@
   <ItemGroup>
     <Content Include="Assets\cake_icon.png" />
     <Content Include="Assets\category_icon.png" />
+    <Content Include="Assets\company_icon.png" />
     <Content Include="Assets\people_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
