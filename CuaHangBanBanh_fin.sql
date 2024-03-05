@@ -51,3 +51,6 @@ create table NhaCungCap
 )
 go
 
+insert into TaiKhoan(Username, Password)
+values('admin', 'admin')
+go
