@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Cua_hang_ban_banh
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;" +
             "Initial Catalog=CUAHANG;" +
@@ -19,7 +19,7 @@ namespace Cua_hang_ban_banh
             "Encrypt=True;" +
             "TrustServerCertificate=True");
 
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -56,7 +56,7 @@ namespace Cua_hang_ban_banh
                 if (isExistUser != null)
                 {
                     this.Hide();
-                    Employees f = new Employees();
+                    EmployeesForm f = new EmployeesForm();
                     f.Show();
                 }
                 else

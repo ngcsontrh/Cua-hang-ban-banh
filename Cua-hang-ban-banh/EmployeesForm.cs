@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cua_hang_ban_banh
 {
-    public partial class Employees : Form
+    public partial class EmployeesForm : Form
     {
-        public Employees()
+        public EmployeesForm()
         {
             InitializeComponent();
         }

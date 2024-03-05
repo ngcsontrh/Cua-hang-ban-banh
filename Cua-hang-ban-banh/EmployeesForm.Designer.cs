@@ -1,6 +1,6 @@
 ﻿namespace Cua_hang_ban_banh
 {
-    partial class Employees
+    partial class EmployeesForm
     {
         /// <summary>
         /// Required designer variable.
