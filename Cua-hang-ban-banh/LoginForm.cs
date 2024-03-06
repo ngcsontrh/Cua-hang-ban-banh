@@ -45,36 +45,38 @@ namespace Cua_hang_ban_banh
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            try
+            else
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("select * from TaiKhoan where Username = @username and Password = @password", conn);
-                cmd.Parameters.AddWithValue("username", username);
-                cmd.Parameters.AddWithValue("password", password);
-                var isExistUser = cmd.ExecuteScalar();
-                if (isExistUser != null)
+                try
                 {
-                    this.Hide();
-                    EmployeesForm f = new EmployeesForm();
-                    f.Show();
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("select * from TaiKhoan where Username = @username and Password = @password", conn);
+                    cmd.Parameters.AddWithValue("username", username);
+                    cmd.Parameters.AddWithValue("password", password);
+                    var isExistUser = cmd.ExecuteScalar();
+                    if (isExistUser != null)
+                    {
+                        this.Hide();
+                        EmployeesForm f = new EmployeesForm();
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show
+                            ("Tên đăng nhập hoặc mật khẩu không chính xác!", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+
+                catch (Exception ex)
                 {
-                    MessageBox.Show
-                        ("Tên đăng nhập hoặc mật khẩu không chính xác!", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            finally
-            {
-                conn.Close();
+                finally
+                {
+                    conn.Close();
+                }
             }
         }
     }
