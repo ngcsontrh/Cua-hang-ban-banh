@@ -47,10 +47,16 @@ create table NhaCungCap
 	Id int primary key identity(1,1),
 	TenNCC nvarchar(100),
 	DiaChi nvarchar(100),
-	SDT varchar(10)
+	SDT varchar(10),
 )
 go
 
 insert into TaiKhoan(Username, Password)
 values('admin', 'admin')
 go
+
+ALTER TABLE NhaCungCap
+ADD LoaiBanh nvarchar(255),
+	NgayCungCap date;
+GO
+
