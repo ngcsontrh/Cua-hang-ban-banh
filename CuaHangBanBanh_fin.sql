@@ -35,7 +35,7 @@ go
 
 create table NhaCungCap
 (
-	Id int primary key identity(1,1),
+	Id int primary key,
 	TenNCC nvarchar(100),
 	DiaChi nvarchar(100),
 	SDT varchar(10),
