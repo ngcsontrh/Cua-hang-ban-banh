@@ -23,22 +23,13 @@ create table NhanVien
 )
 go
 
-create table LoaiBanh
-(
-	Id int primary key identity(1,1),
-	TenLoaiBanh nvarchar(100),
-	XuatXu nvarchar(100),
-	NguyenLieu nvarchar(255)
-)
-go
-
 create table Banh
 (
-	Id int primary key identity(1,1),
+	Id int primary key,
 	TenBanh nvarchar(100),
 	GiaThanh int, 
-	LoaiBanh int,
-	foreign key(LoaiBanh) references LoaiBanh(Id)
+	LoaiBanh nvarchar(255),
+	NgaySanXuat date
 )
 go
 
@@ -48,15 +39,23 @@ create table NhaCungCap
 	TenNCC nvarchar(100),
 	DiaChi nvarchar(100),
 	SDT varchar(10),
+	LoaiBanh nvarchar(255),
+	NgayCungCap date
+)
+go
+
+create table NguyenLieu
+(
+	id int primary key,
+	TenNL nvarchar(255),
+	GiaThanh int,
+	SLTonKho int,
+	NgayNhap date,
+	HanSuDung date
 )
 go
 
 insert into TaiKhoan(Username, Password)
 values('admin', 'admin')
 go
-
-ALTER TABLE NhaCungCap
-ADD LoaiBanh nvarchar(255),
-	NgayCungCap date;
-GO
 
