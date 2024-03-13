@@ -122,22 +122,26 @@ namespace Cua_hang_ban_banh
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xoá?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(rs == DialogResult.Yes)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("delete from NhanVien where Id=@id", conn);
-                cmd.Parameters.AddWithValue("id", Convert.ToInt32(tb_id.Text));
-                cmd.ExecuteNonQuery();
-                LoadData();
-                DelText();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("delete from NhanVien where Id=@id", conn);
+                    cmd.Parameters.AddWithValue("id", Convert.ToInt32(tb_id.Text));
+                    cmd.ExecuteNonQuery();
+                    LoadData();
+                    DelText();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                }
             }
         }
 
@@ -176,13 +180,15 @@ namespace Cua_hang_ban_banh
         {
             GetData();
         }
-        private void btn_search_Click(object sender, EventArgs e)
+
+
+        private void btn_search_id_Click(object sender, EventArgs e)
         {
-            string id = searchBox.Text.Trim();
+            string id = searchBoxId.Text.Trim();
             try
             {
                 conn.Open();
-                if(id.Length == 0 )
+                if (id.Length == 0)
                 {
                     LoadData();
                     return;
@@ -204,10 +210,42 @@ namespace Cua_hang_ban_banh
             }
         }
 
-
-        private void searchBox_KeyUp(object sender, KeyEventArgs e)
+        private void searchBoxId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            btn_search_Click(sender, e);
+            btn_search_id_Click((object)sender, e);
+        }
+
+        private void btn_search_name_Click(object sender, EventArgs e)
+        {
+            string name = searchBoxName.Text.Trim();
+            try
+            {
+                conn.Open();
+                if (name.Length == 0)
+                {
+                    LoadData();
+                    return;
+                }
+                SqlCommand cmd = new SqlCommand("select * from NhanVien where HoTen like @hoTen", conn);
+                cmd.Parameters.AddWithValue("hoTen", name);
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(dataReader);
+                EmployeeData.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void searchBoxName_KeyDown(object sender, KeyEventArgs e)
+        {
+            btn_search_name_Click((object)sender, e);   
         }
     }
 }
