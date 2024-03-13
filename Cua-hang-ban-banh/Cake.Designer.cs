@@ -83,7 +83,7 @@
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(176)))), ((int)(((byte)(122)))));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1500, 58);
+            this.panel2.Size = new System.Drawing.Size(1324, 58);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox4
@@ -169,6 +169,7 @@
             this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân viên";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvBanh
             // 
@@ -385,12 +386,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1500, 667);
+            this.ClientSize = new System.Drawing.Size(1324, 667);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Cake";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cake";
             this.Load += new System.EventHandler(this.Cake_Load);
             this.panel2.ResumeLayout(false);

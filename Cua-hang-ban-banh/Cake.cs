@@ -118,5 +118,12 @@ namespace Cua_hang_ban_banh
             }
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            EmployeesForm f = new EmployeesForm();
+            f.Show();
+            this.Hide();
+        }
     }
 }

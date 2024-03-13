@@ -16,7 +16,7 @@ namespace Cua_hang_ban_banh
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cake());
+            Application.Run(new LoginForm());
         }
     }
 }
