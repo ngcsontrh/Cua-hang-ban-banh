@@ -52,6 +52,12 @@
     <Compile Include="Cake.Designer.cs">
       <DependentUpon>Cake.cs</DependentUpon>
     </Compile>
+    <Compile Include="CakeIngredients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CakeIngredients.Designer.cs">
+      <DependentUpon>CakeIngredients.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cake.resx">
       <DependentUpon>Cake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CakeIngredients.resx">
+      <DependentUpon>CakeIngredients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesForm.resx">
       <DependentUpon>EmployeesForm.cs</DependentUpon>

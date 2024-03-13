@@ -45,3 +45,5 @@ D:\Sources\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.cspro
 D:\Sources\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.csproj.CoreCompileInputs.cache
 D:\Sources\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.exe
 D:\Sources\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.pdb
+C:\Users\NgocSon\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.Cake.resources
+C:\Users\NgocSon\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.CakeIngredients.resources

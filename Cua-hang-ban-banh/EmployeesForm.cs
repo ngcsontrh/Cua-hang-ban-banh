@@ -254,5 +254,12 @@ namespace Cua_hang_ban_banh
             f.Show();
             this.Hide();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            CakeIngredients f  = new CakeIngredients();
+            f.Show();
+            this.Hide();
+        }
     }
 }
