@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.btn_search_name = new System.Windows.Forms.Button();
+            this.searchBoxName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_search_id = new System.Windows.Forms.Button();
+            this.searchBoxId = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EmployeeData = new System.Windows.Forms.DataGridView();
@@ -88,52 +91,87 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1341, 667);
+            this.panel1.Size = new System.Drawing.Size(1324, 667);
             this.panel1.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.btn_search);
-            this.panel5.Controls.Add(this.searchBox);
+            this.panel5.Controls.Add(this.btn_search_name);
+            this.panel5.Controls.Add(this.searchBoxName);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.btn_search_id);
+            this.panel5.Controls.Add(this.searchBoxId);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(334, 58);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1007, 73);
+            this.panel5.Size = new System.Drawing.Size(990, 73);
             this.panel5.TabIndex = 3;
             // 
-            // btn_search
+            // btn_search_name
             // 
-            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(176)))), ((int)(((byte)(122)))));
-            this.btn_search.FlatAppearance.BorderSize = 0;
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_search.Location = new System.Drawing.Point(808, 26);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(131, 35);
-            this.btn_search.TabIndex = 11;
-            this.btn_search.Text = "Tìm kiếm";
-            this.btn_search.UseVisualStyleBackColor = false;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            this.btn_search_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(176)))), ((int)(((byte)(122)))));
+            this.btn_search_name.FlatAppearance.BorderSize = 0;
+            this.btn_search_name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search_name.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search_name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_search_name.Location = new System.Drawing.Point(837, 18);
+            this.btn_search_name.Name = "btn_search_name";
+            this.btn_search_name.Size = new System.Drawing.Size(131, 35);
+            this.btn_search_name.TabIndex = 14;
+            this.btn_search_name.Text = "Tìm kiếm";
+            this.btn_search_name.UseVisualStyleBackColor = false;
+            this.btn_search_name.Click += new System.EventHandler(this.btn_search_name_Click);
             // 
-            // searchBox
+            // searchBoxName
             // 
-            this.searchBox.Location = new System.Drawing.Point(79, 33);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(674, 25);
-            this.searchBox.TabIndex = 1;
-            this.searchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchBox_KeyUp);
+            this.searchBoxName.Location = new System.Drawing.Point(538, 28);
+            this.searchBoxName.Name = "searchBoxName";
+            this.searchBoxName.Size = new System.Drawing.Size(294, 25);
+            this.searchBoxName.TabIndex = 13;
+            this.searchBoxName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchBoxName_KeyDown);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(535, 7);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 17);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Tìm kiếm theo tên:";
+            // 
+            // btn_search_id
+            // 
+            this.btn_search_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(176)))), ((int)(((byte)(122)))));
+            this.btn_search_id.FlatAppearance.BorderSize = 0;
+            this.btn_search_id.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search_id.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search_id.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_search_id.Location = new System.Drawing.Point(254, 19);
+            this.btn_search_id.Name = "btn_search_id";
+            this.btn_search_id.Size = new System.Drawing.Size(131, 35);
+            this.btn_search_id.TabIndex = 11;
+            this.btn_search_id.Text = "Tìm kiếm";
+            this.btn_search_id.UseVisualStyleBackColor = false;
+            this.btn_search_id.Click += new System.EventHandler(this.btn_search_id_Click);
+            // 
+            // searchBoxId
+            // 
+            this.searchBoxId.Location = new System.Drawing.Point(44, 29);
+            this.searchBoxId.Name = "searchBoxId";
+            this.searchBoxId.Size = new System.Drawing.Size(204, 25);
+            this.searchBoxId.TabIndex = 1;
+            this.searchBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchBoxId_KeyPress);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(76, 11);
+            this.label11.Location = new System.Drawing.Point(42, 7);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 17);
+            this.label11.Size = new System.Drawing.Size(108, 17);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Tìm kiếm:";
+            this.label11.Text = "Tìm kiếm theo Id:";
             // 
             // panel4
             // 
@@ -150,16 +188,15 @@
             this.EmployeeData.AllowUserToDeleteRows = false;
             this.EmployeeData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeeData.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeeData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeeData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeData.Location = new System.Drawing.Point(0, 0);
             this.EmployeeData.Name = "EmployeeData";
             this.EmployeeData.ReadOnly = true;
@@ -379,7 +416,7 @@
             this.panel2.ForeColor = System.Drawing.Color.Blue;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1341, 58);
+            this.panel2.Size = new System.Drawing.Size(1324, 58);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox4
@@ -483,10 +520,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1341, 667);
+            this.ClientSize = new System.Drawing.Size(1324, 667);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "EmployeesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -542,8 +579,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button btn_search_id;
+        private System.Windows.Forms.TextBox searchBoxId;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_search_name;
+        private System.Windows.Forms.TextBox searchBoxName;
+        private System.Windows.Forms.Label label12;
     }
 }
