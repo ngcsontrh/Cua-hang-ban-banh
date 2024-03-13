@@ -9,3 +9,15 @@ C:\Users\NgocSon\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-
 C:\Users\NgocSon\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.pdb
 C:\Users\NgocSon\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.EmployeesForm.resources
 C:\Users\NgocSon\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.LoginForm.resources
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\bin\Debug\Cua-hang-ban-banh.exe.config
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\bin\Debug\Cua-hang-ban-banh.exe
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\bin\Debug\Cua-hang-ban-banh.pdb
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.Cake.resources
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.EmployeesForm.resources
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.LoginForm.resources
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua_hang_ban_banh.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.exe
+C:\Users\LENOVO\Desktop\Cua-hang-ban-banh\Cua-hang-ban-banh\obj\Debug\Cua-hang-ban-banh.pdb
