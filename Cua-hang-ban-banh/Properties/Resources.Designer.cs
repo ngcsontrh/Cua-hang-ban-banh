@@ -63,6 +63,26 @@ namespace Cua_hang_ban_banh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anhnen1 {
+            get {
+                object obj = ResourceManager.GetObject("anhnen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anhnen2 {
+            get {
+                object obj = ResourceManager.GetObject("anhnen2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cake_icon {
             get {
                 object obj = ResourceManager.GetObject("cake_icon", resourceCulture);

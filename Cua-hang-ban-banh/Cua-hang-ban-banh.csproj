@@ -94,6 +94,8 @@
     <Content Include="Assets\category_icon.png" />
     <Content Include="Assets\company_icon.png" />
     <Content Include="Assets\people_icon.png" />
+    <None Include="Resources\anhnen2.png" />
+    <None Include="Resources\anhnen1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
