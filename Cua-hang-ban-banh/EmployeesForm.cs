@@ -247,5 +247,12 @@ namespace Cua_hang_ban_banh
         {
             btn_search_name_Click((object)sender, e);   
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Cake f = new Cake();
+            f.Show();
+            this.Hide();
+        }
     }
 }

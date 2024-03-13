@@ -490,6 +490,7 @@
             this.label2.Size = new System.Drawing.Size(149, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Danh sách bánh";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -523,7 +524,7 @@
             this.ClientSize = new System.Drawing.Size(1324, 667);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "EmployeesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
