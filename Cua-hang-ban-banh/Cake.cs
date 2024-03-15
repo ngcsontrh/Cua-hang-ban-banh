@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NccForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,11 @@ namespace Cua_hang_ban_banh
         {
             InitializeComponent();
         }
-        string chuoiketnoi = "Data Source=.\\SQLEXPRESS;Initial Catalog=CUAHANG;Integrated Security=True;";
+        string chuoiketnoi = "Data Source=.\\SQLEXPRESS;" +
+            "Initial Catalog=CUAHANG;" +
+            "Integrated Security=True;" +
+            "Encrypt=True;" +
+            "TrustServerCertificate=True";
         SqlConnection conn = null;
         SqlCommand cmd = new SqlCommand();
 
@@ -36,10 +41,17 @@ namespace Cua_hang_ban_banh
 
         private void Addbt_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            cmd.Connection = conn;
-            cmd.CommandText = "insert into Banh(Id,TenBanh,LoaiBanh,GiaThanh,NgaySanXuat) values (" + Convert.ToInt32(Idtext.Text) + ",N'" + Caketext.Text + "',N'" + Caketypetext.Text + "'," + Convert.ToInt32(Pricetext.Text) + ",'" + CakeDate.Value.ToString("yyyy-MM-dd") + "')";
-            cmd.ExecuteNonQuery();
+            try
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = "insert into Banh(Id,TenBanh,LoaiBanh,GiaThanh,NgaySanXuat) values (" + Convert.ToInt32(Idtext.Text) + ",N'" + Caketext.Text + "',N'" + Caketypetext.Text + "'," + Convert.ToInt32(Pricetext.Text) + ",'" + CakeDate.Value.ToString("yyyy-MM-dd") + "')";
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi! Vui lòng kiểm tra thông tin nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             conn.Close();
             Cake_Load(sender, e);
         }
@@ -134,6 +146,13 @@ namespace Cua_hang_ban_banh
         private void label3_Click(object sender, EventArgs e)
         {
             CakeIngredients f = new CakeIngredients();
+            f.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
             f.Show();
             this.Hide();
         }

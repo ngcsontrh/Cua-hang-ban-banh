@@ -35,14 +35,16 @@ go
 
 create table NhaCungCap
 (
-	Id int primary key,
+	Id int primary key identity(1,1),
 	TenNCC nvarchar(100),
-	DiaChi nvarchar(100),
 	SDT varchar(10),
+	NgayCungCap date,
 	LoaiBanh nvarchar(255),
-	NgayCungCap date
+	DiaChi nvarchar(100),
 )
 go
+
+drop table NhaCungCap
 
 create table NguyenLieu
 (

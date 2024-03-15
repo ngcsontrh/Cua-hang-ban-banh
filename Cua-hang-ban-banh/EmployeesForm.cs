@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NccForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,11 @@ namespace Cua_hang_ban_banh
 {
     public partial class EmployeesForm : Form
     {
-        private SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=CUAHANG;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+        private SqlConnection conn = new SqlConnection("Data Source=.\\SQLEXPRESS;" +
+            "Initial Catalog=CUAHANG;" +
+            "Integrated Security=True;" +
+            "Encrypt=True;" +
+            "TrustServerCertificate=True");
         public EmployeesForm()
         {
             InitializeComponent();
@@ -258,6 +263,13 @@ namespace Cua_hang_ban_banh
         private void label3_Click(object sender, EventArgs e)
         {
             CakeIngredients f  = new CakeIngredients();
+            f.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
             f.Show();
             this.Hide();
         }
